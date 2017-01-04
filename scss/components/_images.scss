@@ -1,0 +1,10 @@
+.jumbotron {
+  background: url(../../img/jumbo2.jpg);
+//  background-image: linear-gradient(#e3f2fd, white);
+  background-size: cover;
+}
+
+#headshot1 {
+  max-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
