@@ -2,3 +2,19 @@
   font-size: 0.95rem;
   margin: 0;
 }
+
+body {
+  position: relative;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#sketch-area {
+  position: relative;
+  z-index: 1;
+}

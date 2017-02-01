@@ -1,10 +1,15 @@
 .jumbotron {
-  background: url(../../img/jumbo2.jpg);
-//  background-image: linear-gradient(#e3f2fd, white);
+//  background-image: linear-gradient(rgba(105, 155, 180, 0.9), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(rgba(105, 155, 180, 0.8), rgba(255, 255, 255, 0.7)), url(../../img/pete_collage_4.jpg);
+  
   background-size: cover;
 }
 
 #headshot1 {
   max-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.gif {
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
