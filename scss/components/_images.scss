@@ -13,3 +13,25 @@
 .gif {
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
+
+@media (min-width: 1200px) {
+
+  .manifesto,
+  .gif,
+  .carousel-item img,
+  #antigone,
+  #headshot1,
+  #about-point img {
+    transition: transform 0.5s;
+  }
+
+  .manifesto:hover,
+  .gif:hover,
+  .carousel-item img:hover,
+  #antigone:hover,
+  #headshot1:hover,
+  #about-point img:hover {
+    transform: scale(1.05);
+  }
+  
+}

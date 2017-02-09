@@ -13,6 +13,12 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .nav-link {
+    font-size: .7em;
+  }
+}
+
 body {
   font-family: 'Arsenal', sans-serif;
 }

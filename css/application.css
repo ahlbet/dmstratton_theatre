@@ -14,10 +14,6 @@ canvas {
   left: 0;
   z-index: 2; }
 
-#sketch-area {
-  position: relative;
-  z-index: 1; }
-
 .nav-item a {
   transition: transform 0.5s; }
 
@@ -30,6 +26,9 @@ canvas {
 @media screen and (max-width: 576px) {
   .nav-link {
     font-size: .781em; } }
+@media screen and (max-width: 425px) {
+  .nav-link {
+    font-size: .7em; } }
 body {
   font-family: 'Arsenal', sans-serif; }
 
@@ -46,5 +45,22 @@ body {
 
 .gif {
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 1200px) {
+  .manifesto,
+  .gif,
+  .carousel-item img,
+  #antigone,
+  #headshot1,
+  #about-point img {
+    transition: transform 0.5s; }
+
+  .manifesto:hover,
+  .gif:hover,
+  .carousel-item img:hover,
+  #antigone:hover,
+  #headshot1:hover,
+  #about-point img:hover {
+    transform: scale(1.05); } }
 
 /*# sourceMappingURL=application.css.map */
