@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body style="background-color: #fff; color: #000;">
+    
+    <style>
+    
+      body {
+        font-family: 'Josefin Slab', serif;
+        font-size: 2em;
+      }
+      
+      #poemArea {
+        list-style: none;
+      }
+    
+    </style>
+      
+    <nav class="navbar navbar-toggleable-sm" style="background-color: #FFF; color: black;">
+        <a class="navbar-brand" href="../index.html">Back</a>
+      </nav>
+      
+    <div class="container">
+<!--      HEADER-->
+      <div class="text-center pt-2">
+        <h1>Poem Generator</h1>
+      </div> 
+      <div class="text-center">
+        <h6>Alex DeCorrevont | Dylan Stratton | Connor Stratton | Tony Foley</h6>
+      </div>
+<!--      /HEADER-->
+      
+<!--      POEM AREA-->
+      <div class="text-center py-3">
+        <button type="button" class="btn btn-lg btn-secondary" onclick="randomPoem()">Create</button>
+      </div>
+        
+      <hr>
+        
+      <div id="poemArea" class="col-lg-12 text-center">
+      </div>
+      
+<!--      /POEM AREA-->
+      
+    </div>
+    
+    <script>
+      
+      var poemArr = [
+        
+        ['i loved the way', 'the dark side of <br> craters', 'remnants of lunar <br> catastrophe', 'i tried to hide', 'in shadows', 'in seas of Serenity <br> of Vapors', 'the way <br> I loved <br> in eclipses', 'you traversed', 'I loved <br> the way <br> you traversed', 'these craters <br> these graves', 'your hands <br> on my face <br> found <br> time', 'sleek, pale echoes', 'through chaos <br> and the chasm', 'i loved', 'you stitched <br> these fissures.'],
+        
+      ['sometimes i count the steps <br> to quiet my creaking heels', 'around the wooden cracks <br> that once sounded', 'of yesterday', 'a hurried pace rattles the grain <br> of tomorrow', 'split splinters through my gums', 'i spit smokey swishers', 'sometimes I count the ashes <br> to quiet my waning dreams', 'rooted, in the wind', 'and a faint mirror of what it once was to be', 'sometimes I count the roses <br> to quiet my lonely fear', 'mercy, please, if you please', 'these petals of past are brittle now.', 'but they are, at least,', 'beyond the white curtain', 'beyond her forced smile <br> that only ever came out', 'when the sun was down', 'I think her light faded <br> my fabric', '', ''],
+        
+      ['The pale pink crepe blooming into wilting', 'before me in the gallery, the paper petals', 'spreading over flower pots, the cement', 'molds planting a skyline with gray', 'my eyes climbing four molds in the first row', 'seven molds and six flowers in the second,', 'to a third row on the wall: a photograph', 'of the piece, my eyes believing these flowers', 'and shoving them into one pot,', 'my eyes placing a pot from the photo', 'onto the ground, the pots being not', 'pots, being only cement molds,', 'being self-potted and present', 'containing themselves, containing', 'precisely gray, my eyes beaming from gray','this cement posing with flowers, pots', 'posing with pink, gray posing with crepe,', 'and with the photo posing in a sheen of sky,', 'my eyes place a pot into my right pocket.', 'if'],
+      
+      ['Once the rain has been shelved,', 'the smell of an old lake', 'ships through the screen door and', 'meets the soap on the bowl <br> I have cleaned. It is night', 'and I am near a dream.', 'There had been friends, wine, grains, <br> pills, words, and not much more.', 'Some bald screech of a man', 'dropped pants and first we cheered <br> then drowned him in sighs. We', 'talked states, tax, boats and tides,', 'live streamed the rich and rats.', 'We spritzed a proud Left pose.', 'We threw up in our bowls <br> and bowled, howled, held our bows.', 'We spilled class. We pissed sneers <br> at men, and we tugged good <br> at our own dicks. Our skin', 'quite pale, a fact blubbed out', 'like some bright and blank page', 'I have since rinsed the place:', 'I have scrubbed the sink, bowls,', 'pots, and spoons; I have swept', 'and mopped the floor; I have', 'sprayed and wiped tops of all <br> those words; and I have paged', 'through all those thoughts, and sponged', 'and shipped them off with scorn.', 'But now, the door is wide.', 'My breath is choked. I float.', 'The lake is here, right up', 'to my gums. The rain, too,', 'is here, and has brought down <br> my shelves. I smell like drains.', 'My foot drips off its toes <br> which find a wet, clean bowl.', '<img src="img/man-i-am_opt.gif">'],
+          
+      ['is it the light <br> or the darker time <br> of the year', 'in the quieter world', 'you thought this could be', 'the world whose dreams blossom', 'and gasp beneath the frozen glass', 'of the heart <br> and its breaking', 'and before they were mine,', 'my dreams were often of swans', 'dozens of swans, short-chained', 'to the rainclouds, singing <br> through the colder winds of January', 'singing just as horribly <br> as we\'ve come to know love.'],
+        
+      ['god\'s country', 'have you found me yet', '', ';', 'no', 'i wish you loved the seconds when we didn\'t fuck', '<img class="img-fluid" src="img/stay_opt.gif">', '<img class="img-fluid" src="img/will_opt.gif">'],
+          
+      ['I have a dancer\'s pride when pressed', 'against walls, I have a force of miniature', 'things. At sunrise I rise like a king', 'without his home, wandering. Nomadic', 'steps like exhales from his soles. Trails <br> created', 'but directions have lost me about five minutes', 'back, so however magnetized we claim', 'to be, babe, I know now there is no North Pole', 'aren\'t there any memories worth saving? Or are', 'we mindless like the man with eyes from feet forward?', 'I haven\'t received any help to turn me', 'towards the view that thought is a raft', 'and the people are essentially an ocean', 'of bliss: the sheer size and power of a', 'galaxy can be appreciated by anyone on a <br> clear night', 'unless of course, the others were to come too', 'you know what company fear is: you know <br> precious lives', 'they are drinking tea, warming themselves to the', 'thought of an approach like death -- a passing <br> like receding galaxies. They', 'accelerate the harmony between this and them. Empty', 'phrases have been said over and over again', 'so let\'s try to get some fresh air in the lungs today.'],
+        
+      ['I can see the sky', 'pulling <br> the stars closer <br> to the dark', 'I feel it falling <br> through my hands', 'as I renounce <br> all forms of undress', 'and if there\'s water <br> on Mars, you\'ll find me <br> drowning', 'thirsty <br> for Jupiter']      
+        
+      ]
+    
+      function randomPoem() {
+        
+          var index1 = Math.floor(Math.random()*poemArr[0].length);
+          var index2 = Math.floor(Math.random()*poemArr[1].length);
+          var index3 = Math.floor(Math.random()*poemArr[2].length);
+          var index4 = Math.floor(Math.random()*poemArr[3].length);
+          var index5 = Math.floor(Math.random()*poemArr[4].length);
+          var index6 = Math.floor(Math.random()*poemArr[5].length);
+          var index7 = Math.floor(Math.random()*poemArr[6].length);
+          var index8 = Math.floor(Math.random()*poemArr[7].length);
+          
+          document.querySelector('#poemArea').innerHTML = poemArr[0][index1] + '<br>' + poemArr[1][index2] + '<br>' + poemArr[2][index3] + '<br>' + poemArr[3][index4] + '<br>' + poemArr[4][index5] + '<br>' + poemArr[5][index6] + '<br>' + poemArr[6][index7] + '<br>' + poemArr[7][index8];
+      }
+    </script>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
