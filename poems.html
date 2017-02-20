@@ -21,6 +21,12 @@
         p {
             margin-bottom: 0;
         }
+        
+        .poemButton {
+            border: none;
+            background: none;
+            padding: 0;
+        }
     
     </style>
       
@@ -80,21 +86,39 @@
         
       ]
     
+      var poemArea = $('#poemArea');
+      var itemIndex = 0;
+      
       $('#createButton').click(function(event) {
         
           event.preventDefault();
           
-          var poemArea = $('#poemArea');
           poemArea.html('');
           for (var i = 0; i < poemArr.length; i++) {
               
               var randomIndex = Math.floor(Math.random()*poemArr[i].length);
-              var randomArray = [poemArr[i][randomIndex]].join(' ');
-//              var newPoemArray = randomArray.join(' ');
+              var randomArray = [poemArr[i][randomIndex]].join('');
               
-              poemArea.append('<p>'+randomArray+'</p>'); 
+              poemArea.append('<button id="poemButton'+ itemIndex++ +'" type="button" class="poemButton col-lg-12 btn-sm">'+randomArray+'</button>');
           } 
       });
+        
+        $(document).on('click', '.poemButton', function(e) {
+            console.log(this);
+            
+            e.preventDefault();
+            
+            poemArea.html('');
+            poemArea.append(this);
+            
+            for (var i = 0; i < poemArr.length; i++) {
+              
+              var randomIndex = Math.floor(Math.random()*poemArr[i].length);
+              var randomArray = [poemArr[i][randomIndex]].join('');
+              
+              poemArea.append('<button id="poemButton'+ itemIndex++ +'" type="button" class="poemButton col-lg-12 btn-sm">'+randomArray+'</button>');
+          }   
+        });
     </script>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
