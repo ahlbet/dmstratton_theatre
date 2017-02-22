@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>shapes</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="css/application.css">-->
+   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+     
+    <nav class="navbar navbar-toggleable-sm" style="background-color: #FFF; color: black;">
+        <a class="navbar-brand" href="../index.html">Back</a>
+    </nav>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1>Square</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <p class="lead">Instructions: Hold r and drag for squares. Hold e and drag for circles. Hold l and drag for lines. Hold d and drag to erase. + increases size and - decreases size. Press c to clear the canvas.</p>
+          <div class="text-center">
+            <p>Size: <span id="sizeSpan">100 px.</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div id="sketch-area">
+<!--            sketch goes here-->
+          </div>
+        </div>  
+      </div>  
+       <!----------------------------
+                FOOTER
+        ----------------------------->
+        <hr>
+
+        <div class="row py-1">
+          <div class="col-md-12 text-center">
+            <small>&copy; <script>document.write(new Date().getFullYear())</script> Dylan Stratton</small>
+          </div>
+        </div>
+
+        <!----------------------------
+                /FOOTER
+        ----------------------------->
+    </div>
+    <script src="shapes-sketch.js" type="text/javascript"></script>
+  </body>
+</html>
